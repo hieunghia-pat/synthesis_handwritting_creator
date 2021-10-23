@@ -19,7 +19,7 @@ def getBetaValue(type):
 	if type == "stroke":
 		path = os.path.join("generate_syn_image/color_channels", random.choice(os.listdir("generate_syn_image/color_channels")))
 	elif type == "background":
-		path = os.path.join("generate_syn_image/color_channels", random.choice(os.listdir("generate_syn_image/background_color_channels")))
+		path = os.path.join("generate_syn_image/background_color_channels", random.choice(os.listdir("generate_syn_image/background_color_channels")))
 	else: 
 		raise Exception("Type must be stroke or background.")
 
@@ -41,7 +41,7 @@ def AddColor(image):
 	# get color for background
 	alpha, beta = getBetaValue(type="background")
 	image = cp.where(image < 120, txt_colored_arr, image)
-	bg_colored_arr = (cp.random.beta(alpha, beta, image.shape)*100).astype(cp.uint8)
+	bg_colored_arr = (cp.random.beta(alpha, beta, image.shape)*255).astype(cp.uint8)
 	image = cp.where(image >= 120, bg_colored_arr, image)
 
 	return Image.fromarray(cp.asnumpy(image))
@@ -103,7 +103,7 @@ def Processing02(image): #add smoothed noise keeping the edge intact
 	return(image)
 '''
 def Processing03(image): #add elastic deformation
-	px = cp.asarray(image)
+	px = np.asarray(image)
 	px = pixel_deform(px, sigma=random.randrange(6,8))
 	image = Image.fromarray(px)
 	image = image.crop((5,5,image.size[0]-5,image.size[1]-5))
@@ -194,6 +194,8 @@ def CreateLineImgDataset(corpus, startfrom):
 			cnt=0
 		RenderLineImage(text,"{}{}\line_{}".format(path,foldernum,cnt))
 		labelfile.writelines("line_{}.png, {}".format(cnt,text))
+
+	labelfile.close()
 		
 def CreateWordImgDataset(corpus, startfrom):
 	cnt=0
@@ -202,6 +204,7 @@ def CreateWordImgDataset(corpus, startfrom):
 	if not os.path.isdir(os.path.join(path, str(foldernum))):
 		os.mkdir(os.path.join(path, str(foldernum)))
 	# print("Folder 0\n")
+	labelfile = open("{}/{}/label.txt".format(path,str(foldernum)),"w+",encoding='utf-8')
 	for text in tqdm(corpus, dynamic_ncols=True, colour="green"):
 		text = re.sub(r"[\[\]@#$^&]", "", text)
 		cnt +=1
@@ -210,8 +213,12 @@ def CreateWordImgDataset(corpus, startfrom):
 			# print("Folder {}\n".format(foldernum))
 			if not os.path.exists(os.path.join(path, str(foldernum))):
 				os.mkdir(os.path.join(path, str(foldernum)))
+			labelfile = open("{}/{}/label.txt".format(path,str(foldernum)),"w+",encoding='utf-8')
 			cnt=0
 		RenderWordImage(text, "{}/{}/word_{}".format(path,foldernum,cnt))
+		labelfile.writelines("word_{}.png, {}".format(cnt,text))
+
+	labelfile.close()
 
 if __name__ == "__main__":
 	text = "This a [ ] an example * %!@#$%^&*() line."
