@@ -1,6 +1,7 @@
 import PIL
 from PIL import Image, ImageFont, ImageDraw, ImageFilter, ImageOps
 import random
+import numpy as np
 import cupy as cp
 import os
 from scipy.ndimage import map_coordinates, gaussian_filter
@@ -84,9 +85,9 @@ def fitcrop(image):
 
 def pixel_deform(X, alpha=20, sigma=6): #elastic deform on pixelwise basis
 	shape = X.shape
-	dx = gaussian_filter(cp.random.randn(*shape), sigma, mode="constant", cval=0) * alpha #originally with random_state.rand * 2 - 1
-	dy = gaussian_filter(cp.random.randn(*shape), sigma, mode="constant", cval=0) * alpha
-	x, y = cp.meshgrid(cp.arange(shape[0]), cp.arange(shape[1]), indexing='ij')
+	dx = gaussian_filter(np.random.randn(*shape), sigma, mode="constant", cval=0) * alpha #originally with random_state.rand * 2 - 1
+	dy = gaussian_filter(np.random.randn(*shape), sigma, mode="constant", cval=0) * alpha
+	x, y = np.meshgrid(np.arange(shape[0]), np.arange(shape[1]), indexing='ij')
 	indices = x+dx, y+dy
 	return map_coordinates(X, indices, order=3).reshape(shape)
 
