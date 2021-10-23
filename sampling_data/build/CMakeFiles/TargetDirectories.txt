@@ -1,0 +1,3 @@
+/home/nguyennghia/Projects/UIT_HWDB_v1/sampling_data/build/CMakeFiles/rebuild_cache.dir
+/home/nguyennghia/Projects/UIT_HWDB_v1/sampling_data/build/CMakeFiles/ProcessImage.dir
+/home/nguyennghia/Projects/UIT_HWDB_v1/sampling_data/build/CMakeFiles/edit_cache.dir
