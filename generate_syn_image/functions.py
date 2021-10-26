@@ -7,6 +7,7 @@ import os
 from scipy.ndimage import map_coordinates, gaussian_filter
 from tqdm import tqdm
 import re
+import json
 
 def RandSpace():
 	cnt=random.randint(1,2)
@@ -39,10 +40,12 @@ def AddColor(image):
 	txt_colored_arr = (cp.random.beta(alpha, beta, image.shape)*100).astype(cp.uint8)
 
 	# get color for background
-	alpha, beta = getBetaValue(type="background")
-	image = cp.where(image < 120, txt_colored_arr, image)
-	bg_colored_arr = (cp.random.beta(alpha, beta, image.shape)*255).astype(cp.uint8)
-	image = cp.where(image >= 120, bg_colored_arr, image)
+	rnum = np.random.binomial(1, 0.7)
+	if rnum == 1:
+		alpha, beta = getBetaValue(type="background")
+		image = cp.where(image < 120, txt_colored_arr, image)
+		bg_colored_arr = (cp.random.beta(alpha, beta, image.shape)*255).astype(cp.uint8)
+		image = cp.where(image >= 120, bg_colored_arr, image)
 
 	return Image.fromarray(cp.asnumpy(image))
 
@@ -179,46 +182,45 @@ def CreateLineImgDataset(corpus, startfrom):
 	foldernum=startfrom
 	path = "UIT_HWDB_line_syn"
 	if not os.path.isdir(os.path.join(path, str(foldernum))):
-		os.mkdir(os.path.join(path, str(foldernum)))
-	labelfile = open("{}/{}/label.txt".format(path,str(foldernum)),"w+",encoding='utf-8')
-	# print("Folder 0\n")
-	for text in tqdm(corpus, dynamic_ncols=True, colour="green"):
+		os.makedirs(os.path.join(path, str(foldernum)))
+	labels = {}
+	for text in tqdm(corpus, dynamic_ncols=True):
 		text = re.sub(r"[\[\]@#$^&]", "", text)
+		text = re.sub("\n", "", text)
 		cnt +=1
 		if (cnt==500):
+			json.dump(labels, open("{}/{}/label.json".format(path,str(foldernum)),"w+",encoding='utf-8'), ensure_ascii=False)
+			labels = {}
 			foldernum+=1
 			# print("Folder {}\n".format(foldernum))
 			if not os.path.isdir(os.path.join(path, str(foldernum))):
-				os.mkdir(os.path.join(path, str(foldernum)))
-			labelfile = open("{}/{}/label.txt".format(path,str(foldernum)),"w+",encoding='utf-8')
+				os.makedirs(os.path.join(path, str(foldernum)))
 			cnt=0
-		RenderLineImage(text,"{}{}\line_{}".format(path,foldernum,cnt))
-		labelfile.writelines("line_{}.png, {}".format(cnt,text))
-
-	labelfile.close()
+		RenderLineImage(text,"{}/{}/line_{}".format(path,foldernum,cnt))
+		labels[f"line_{cnt}.png"] = f"{text}"
 		
 def CreateWordImgDataset(corpus, startfrom):
 	cnt=0
 	foldernum=startfrom
 	path = "UIT_HWDB_word_syn"
 	if not os.path.isdir(os.path.join(path, str(foldernum))):
-		os.mkdir(os.path.join(path, str(foldernum)))
+		os.makedirs(os.path.join(path, str(foldernum)))
 	# print("Folder 0\n")
-	labelfile = open("{}/{}/label.txt".format(path,str(foldernum)),"w+",encoding='utf-8')
-	for text in tqdm(corpus, dynamic_ncols=True, colour="green"):
+	labels = {}
+	for text in tqdm(corpus, dynamic_ncols=True):
 		text = re.sub(r"[\[\]@#$^&]", "", text)
+		text = re.sub("\n", "", text)
 		cnt +=1
 		if (cnt==500):
+			json.dump(labels, open("{}/{}/label.json".format(path,str(foldernum)),"w+",encoding='utf-8'), ensure_ascii=False)
+			labels = {}
 			foldernum +=1
 			# print("Folder {}\n".format(foldernum))
 			if not os.path.exists(os.path.join(path, str(foldernum))):
-				os.mkdir(os.path.join(path, str(foldernum)))
-			labelfile = open("{}/{}/label.txt".format(path,str(foldernum)),"w+",encoding='utf-8')
+				os.makedirs(os.path.join(path, str(foldernum)))
 			cnt=0
 		RenderWordImage(text, "{}/{}/word_{}".format(path,foldernum,cnt))
-		labelfile.writelines("word_{}.png, {}".format(cnt,text))
-
-	labelfile.close()
+		labels[f"word_{cnt}.png"] = f"{text}"
 
 if __name__ == "__main__":
 	text = "This a [ ] an example * %!@#$%^&*() line."

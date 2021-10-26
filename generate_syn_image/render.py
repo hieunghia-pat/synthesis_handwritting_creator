@@ -20,4 +20,4 @@ if args["level"] == "word":
 else:
     lines = open(corpus["line"]).readlines()
     # lines.sort()
-    CreateWordImgDataset(lines, args["start_from"])
+    CreateLineImgDataset(lines, args["start_from"])
