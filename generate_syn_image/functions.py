@@ -2,12 +2,12 @@ import PIL
 from PIL import Image, ImageFont, ImageDraw, ImageFilter, ImageOps
 import random
 import numpy as np
-import cupy as cp
 import os
 from scipy.ndimage import map_coordinates, gaussian_filter
 from tqdm import tqdm
 import re
 import json
+import cv2 as cv
 
 def RandSpace():
 	cnt=random.randint(1,2)
@@ -33,21 +33,22 @@ def getBetaValue(type):
 	return(alpha, beta)
 	
 def AddColor(image):
-	image = cp.asarray(image)
+	image = np.asarray(image)
 
 	# get color for stroke
 	alpha, beta = getBetaValue(type="stroke")	
-	txt_colored_arr = (cp.random.beta(alpha, beta, image.shape)*100).astype(cp.uint8)
+	txt_colored_arr = (np.random.beta(alpha, beta, image.shape)*100).astype(np.uint8)
 
 	# get color for background
 	rnum = np.random.binomial(1, 0.7)
 	if rnum == 1:
 		alpha, beta = getBetaValue(type="background")
-		image = cp.where(image < 120, txt_colored_arr, image)
-		bg_colored_arr = (cp.random.beta(alpha, beta, image.shape)*255).astype(cp.uint8)
-		image = cp.where(image >= 120, bg_colored_arr, image)
+		image = np.where(image < 120, txt_colored_arr, image)
+		bg_colored_arr = (np.random.beta(alpha, beta, image.shape)*255).astype(np.uint8)
+		bg_colored_arr = cv.blur(bg_colored_arr, (7, 7))
+		image = np.where(image >= 120, bg_colored_arr, image)
 
-	return Image.fromarray(cp.asnumpy(image))
+	return Image.fromarray(image)
 
 def fitcrop(image):
 	w,h = image.size
