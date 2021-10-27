@@ -6,7 +6,7 @@ import argparse
 parser = argparse.ArgumentParser()
 
 parser.add_argument("--level", type=str, help="word level or line level")
-parser.add_argument("--start-from", type=int)
+parser.add_argument("--start-from", type=int, default=0)
 
 args = parser.parse_args()
 args = vars(args)

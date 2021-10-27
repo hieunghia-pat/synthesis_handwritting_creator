@@ -48,43 +48,32 @@ def AddColor(image):
 		bg_colored_arr = cv.blur(bg_colored_arr, (7, 7))
 		image = np.where(image >= 120, bg_colored_arr, image)
 
+	image = cv.blur(image, (3, 3))
+
 	return Image.fromarray(image)
 
 def fitcrop(image):
 	w,h = image.size
-	px = image.load()
-	found = False
-	for i in range(h):
-		for j in range(w):
-			if (px[j,i]!=(255,255,255)):
-				up = i
-				found=True
-				break
-		if (found): break
-	found = False
-	for i in range(h):
-		for j in range(w):
-			if (px[j,h-1-i]!=(255,255,255)):
-				bottom = h-i
-				found=True
-				break
-		if (found): break
-	found = False		
-	for j in range(w):
-		for i in range(h):
-			if (px[j,i]!=(255,255,255)):
-				left = j
-				found=True
-				break
-		if (found): break
-	found = False
-	for j in range(w):
-		for i in range(h):
-			if (px[w-1-j,i]!=(255,255,255)):
-				right = w-j
-				found=True
-				break
-		if (found): break
+	image = np.asarray(image)
+	left = 0
+	while image[:, left].mean() == 255:
+		left += 1
+		assert left < w, "blank image"
+	right = w-1
+	while image[:, right].mean() == 255:
+		right -= 1
+		assert right > 0, "blank image"
+	up = 0
+	while image[up, :].mean() == 255:
+		up += 1
+		assert up < h, "blank image"
+	bottom = h-1
+	while image[bottom, :].mean() == 255:
+		bottom -= 1
+		assert bottom > 0, "blank image"
+	
+	image = Image.fromarray(image)
+
 	return image.crop((left, up, right, bottom))
 
 def pixel_deform(X, alpha=20, sigma=6): #elastic deform on pixelwise basis
