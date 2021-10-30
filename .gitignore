@@ -1,3 +1,4 @@
 UIT_*
 
 __pycache__
+*.pyc
