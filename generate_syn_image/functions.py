@@ -71,10 +71,10 @@ def fitcrop(image):
 	while image[bottom, :].mean() == 255:
 		bottom -= 1
 		assert bottom > 0, "blank image"
-	
-	image = Image.fromarray(image)
 
-	return image.crop((left, up, right, bottom))
+	image = image[up-13:bottom+13, left-13:right+13]
+
+	return Image.fromarray(image)
 
 def pixel_deform(X, alpha=20, sigma=6): #elastic deform on pixelwise basis
 	shape = X.shape
@@ -146,8 +146,8 @@ def RenderLineImage(text, imagefile):
 	for word in words:
 		draw.text((x_coor, y_coor + random.randint(-2,6)), word, font = font, fill="#000000")
 		x_coor += font.getsize(word)[0]
-	image = Processing(image)
 	image = fitcrop(image)
+	image = Processing(image)
 	image.save("{}.png".format(imagefile))
 
 def RenderWordImage(text, imagefile):
@@ -176,6 +176,7 @@ def CreateLineImgDataset(corpus, startfrom):
 	labels = {}
 	for text in tqdm(corpus, dynamic_ncols=True):
 		text = re.sub(r"[\[\]@#$^&]", "", text)
+		text = re.sub("-", " ", text)
 		text = re.sub("\n", "", text)
 		cnt +=1
 		if (cnt==500):
