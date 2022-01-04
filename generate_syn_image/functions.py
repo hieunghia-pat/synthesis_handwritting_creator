@@ -18,9 +18,9 @@ def RandSpace():
 
 def getBetaValue(type):
 	if type == "stroke":
-		path = os.path.join("generate_syn_image/color_channels", random.choice(os.listdir("generate_syn_image/color_channels")))
+		path = os.path.join("color_channels", random.choice(os.listdir("color_channels")))
 	elif type == "background":
-		path = os.path.join("generate_syn_image/background_color_channels", random.choice(os.listdir("generate_syn_image/background_color_channels")))
+		path = os.path.join("background_color_channels", random.choice(os.listdir("background_color_channels")))
 	else: 
 		raise Exception("Type must be stroke or background.")
 
@@ -40,13 +40,19 @@ def AddColor(image):
 	txt_colored_arr = (np.random.beta(alpha, beta, image.shape)*100).astype(np.uint8)
 
 	# get color for background
-	rnum = np.random.binomial(1, 0.7)
-	if rnum == 1:
-		alpha, beta = getBetaValue(type="background")
-		image = np.where(image < 120, txt_colored_arr, image)
-		bg_colored_arr = (np.random.beta(alpha, beta, image.shape)*255).astype(np.uint8)
-		bg_colored_arr = cv.blur(bg_colored_arr, (7, 7))
-		image = np.where(image >= 120, bg_colored_arr, image)
+	# rnum = np.random.binomial(1, 0.7)
+	# if rnum == 1:
+	# 	alpha, beta = getBetaValue(type="background")
+	# 	image = np.where(image < 120, txt_colored_arr, image)
+	# 	bg_colored_arr = (np.random.beta(alpha, beta, image.shape)*255).astype(np.uint8)
+	# 	bg_colored_arr = cv.blur(bg_colored_arr, (7, 7))
+	# 	image = np.where(image >= 120, bg_colored_arr, image)
+	
+	alpha, beta = getBetaValue(type="background")
+	image = np.where(image < 120, txt_colored_arr, image)
+	bg_colored_arr = (np.random.beta(alpha, beta, image.shape)*255).astype(np.uint8)
+	bg_colored_arr = cv.blur(bg_colored_arr, (7, 7))
+	image = np.where(image >= 120, bg_colored_arr, image)
 
 	image = cv.blur(image, (3, 3))
 
@@ -125,7 +131,7 @@ def Processing(image, k=0):
 
 def RenderLineImage(text, imagefile):
 
-	font_path = os.path.join("generate_syn_image/VNfonts", random.choice(os.listdir("generate_syn_image/VNfonts")))
+	font_path = os.path.join("VNfonts", random.choice(os.listdir("VNfonts")))
 	font = ImageFont.truetype(font_path,random.randint(80,150))
 	words=text.split()
 	render_text = ""
@@ -146,25 +152,25 @@ def RenderLineImage(text, imagefile):
 	for word in words:
 		draw.text((x_coor, y_coor + random.randint(-2,6)), word, font = font, fill="#000000")
 		x_coor += font.getsize(word)[0]
-	image = fitcrop(image)
+	# image = fitcrop(image)
 	image = Processing(image)
 	image.save("{}.png".format(imagefile))
 
 def RenderWordImage(text, imagefile):
 
-	font_path = os.path.join("generate_syn_image/VNfonts", random.choice(os.listdir("generate_syn_image/VNfonts")))
+	font_path = os.path.join("VNfonts", random.choice(os.listdir("VNfonts")))
 	font = ImageFont.truetype(font_path,random.randint(80,150))
 	content_size = font.getsize(text)
 	
-	image = Image.new("L", (content_size[0]+20, content_size[1]+20),"#ffffff")
+	image = Image.new("L", (content_size[0]+50, content_size[1]+50),"#ffffff")
 	draw = ImageDraw.Draw(image)
 	
-	x_coor = 10
-	y_coor = 10
+	x_coor = 30
+	y_coor = 30
 	draw.text((x_coor,y_coor), text, font=font, fill="#000000")
    
+	# image = fitcrop(image)
 	image = Processing(image)
-	image = fitcrop(image)
 	image.save("{}.png".format(imagefile))
 
 def CreateLineImgDataset(corpus, startfrom):
@@ -189,6 +195,8 @@ def CreateLineImgDataset(corpus, startfrom):
 			cnt=0
 		RenderLineImage(text,"{}/{}/line_{}".format(path,foldernum,cnt))
 		labels[f"line_{cnt}.png"] = f"{text}"
+
+	json.dump(labels, open("{}/{}/label.json".format(path,str(foldernum)),"w+",encoding='utf-8'), ensure_ascii=False)
 		
 def CreateWordImgDataset(corpus, startfrom):
 	cnt=0
@@ -212,6 +220,8 @@ def CreateWordImgDataset(corpus, startfrom):
 			cnt=0
 		RenderWordImage(text, "{}/{}/word_{}".format(path,foldernum,cnt))
 		labels[f"word_{cnt}.png"] = f"{text}"
+
+	json.dump(labels, open("{}/{}/label.json".format(path,str(foldernum)),"w+",encoding='utf-8'), ensure_ascii=False)
 
 if __name__ == "__main__":
 	text = "This a [ ] an example * %!@#$%^&*() line."

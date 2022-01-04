@@ -1,5 +1,3 @@
-import sys
-sys.path.append("generate_syn_image")
 from functions import CreateLineImgDataset, CreateWordImgDataset
 import argparse
 
@@ -11,7 +9,7 @@ parser.add_argument("--start-from", type=int, default=0)
 args = parser.parse_args()
 args = vars(args)
 
-corpus = {"word": "generate_syn_image/VN_word_dataset.txt", "line": "generate_syn_image/VN_line_dataset.txt"}
+corpus = {"word": "VN_word_dataset.txt", "line": "VN_line_dataset.txt"}
 
 if args["level"] == "word":
     words = open(corpus["word"]).readlines()

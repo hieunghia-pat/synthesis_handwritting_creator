@@ -8,7 +8,9 @@ CHỦ
 NGHĨA
 VIỆT
 NAM
-36/2005/QH11
+36
+2005
+QH11
 QUỐC
 HỘI
 NƯỚC
@@ -111981,7 +111983,6 @@ cho
 rằng
 chương
 trình
-trả-tiền-cho-người-triệt-sản
 là
 một
 dạng
@@ -112324,7 +112325,12 @@ này
 thì
 thỏa
 thuận
-trả-tiền-cho-người-triệt-sản
+trả
+tiền
+cho
+người
+triệt
+sản
 hoàn
 toàn
 không
@@ -114664,7 +114670,13 @@ dặt
 trước
 đề
 xuất
-thưởng-tiền-theo-kết-quả-học-tập,
+thưởng
+tiền
+theo
+kết
+quả
+học
+tập,
 nhưng
 ý
 tưởng
@@ -114756,7 +114768,6 @@ chính
 cho
 chương
 trình
-thưởng-tiền-theo-kết-quả-học-tập
 cho
 giáo
 viên
@@ -174543,8 +174554,6 @@ lang
 Đồi
 Capitol”,
 CNN,
-http://edition.cnn.com/2009/
-POLITICS/07/13/line.standers/
 Amanda
 Ripley,
 tiền
@@ -174816,7 +174825,6 @@ hàng”,
 Fox
 Business,
 20/10/2011,
-www.foxbusiness.
 Christopher
 Caldwell,
 quyền
@@ -174838,9 +174846,6 @@ tả
 ở
 địa
 chỉ
-https://
-store.united.com/travel/options/control/category?category_id=UM_PMRLI
-NE&navSource=Travel+Options+Main+Menu&linkTitle=UM_PMRLINE;
 David
 Millward,
 bay
@@ -174855,8 +174860,7 @@ khi
 xếp
 hàng”,
 Telegraph,
-26/3/2009,
-www.london-luton.co.uk/en/prioritylane.
+26/3/2009
 Ramin
 Setoodeh,
 bước
@@ -174927,9 +174931,6 @@ trích
 của
 Mohney,
 chỗ”.
-com/ticket_front_of
-_line.html.
-www.hbo.com/curb-your-enthusiasm/episodes/index.html#1/curb-yourenthusiasm/episodes/4/36-the-car-pool-lane/synopsis.html.
 không
 còn
 phải
@@ -175166,9 +175167,6 @@ hàng
 hộ”,
 FindLaw,
 2/9/2011;
-http://blogs.findlaw.
-com/supreme_court/2011/09/need-a-seat-at-supreme-court-oral-argumentshire-a-line-stander.html;
-www.qmsdc.com/linestanding.html.
 Câu
 nói
 của
@@ -175178,8 +175176,6 @@ có
 tại
 địa
 chỉ
-http://
-qmsdc.com/Response%20to%20S-2177.htm.
 Palmeri,
 vô
 gia
@@ -175251,7 +175247,6 @@ Tân
 Hoa
 Xã,
 11/3/2010,
-www.istockanalyst.
 Yang
 Wanli,
 đầu
@@ -175269,8 +175264,6 @@ tệ”,
 China
 Daily,
 24/12/2009,
-www.chinadaily.com.cn/bizchina/2009-12/24/
-content_9224785.htm;
 Pierson,
 Quốc:
 tư
@@ -175365,7 +175358,6 @@ bất
 kể
 khủng
 hoảng”.
-www.md2.com/md2-vip-medical.php?qsx=21.
 Country,
 1/2011..
 Sullivan,
@@ -175615,7 +175607,6 @@ bài
 viết
 nghiên
 cứu,
-www.krueger.princeton.edu/working_papers.html.
 giàu
 được
 chen
@@ -175705,7 +175696,6 @@ là
 3.848
 người.
 Nguồn:
-http://projectprevention.org/statistics.
 thu
 hút
 người
@@ -175762,7 +175752,6 @@ BBC
 News
 Magazine,
 8/2/2010,
-http://news.bbc.co.uk/2/hi/uk_news/magazine/8500285.stm.
 cắt
 ống
 dẫn
@@ -175933,7 +175922,6 @@ Economics
 trang
 1755–
 98,
-www.economics.harvard.edu/faculty/fryer/papers_fryer.
 quả
 học
 tập
@@ -176061,7 +176049,6 @@ of
 Human
 Resources
 45
-http://works.bepress.
 viên
 giỏi
 nhất
@@ -176096,8 +176083,6 @@ gia,
 Đại
 học
 Vanderbilt,
-www.performanceincentives.
-org/news/detail.aspx?pageaction=ViewSinglePublic&LinkID=46&ModuleID
 Matthew
 G.
 Springer
@@ -176114,8 +176099,6 @@ kết
 quả
 tốt”,
 21/9/2010,
-www.performanceincentives.org/news/
-detail.aspx?pageaction=ViewSinglePublic&LinkID=561&ModuleID=48&N
 EWSPID=1;
 Nick
 Anderson,
@@ -176321,7 +176304,10 @@ chê
 trách
 chương
 trình
-Ăn-kiêng-nhận-tiền
+Ăn
+kiêng
+nhận
+tiền
 của
 NHS”,
 BBC
@@ -176651,8 +176637,6 @@ cao”,
 BBC
 News,
 10/2/2004,
-http://news.bbc.
-co.uk/2/hi/business/3472785.stm;
 đốc
 Nokia
 chịu
@@ -176669,8 +176653,6 @@ lục”,
 BBC
 News,
 14/1/2002,
-http://news.bbc.co.uk/2/hi/
-europe/1759791.stm.
 quyết
 được
 tình
@@ -176706,7 +176688,6 @@ trang
 web
 AOL,
 2/10/2010,
-http://autos.aol.com/pay-to-speed-nevada/.
 ở
 Paris
 nói
@@ -176742,8 +176723,6 @@ Quốc”,
 BBC
 News,
 21/9/2007,
-http://news.bbc.
-co.uk/2/hi/asia-pacific/7002201.stm;
 Clifford
 Coonan,
 Quốc
@@ -176784,7 +176763,6 @@ Tân
 Hoa
 xã,
 20/1/2008,
-http://english.sina.com/china/1/2008/0120/142656.html;
 Melinda
 Liu,
 sách
@@ -177221,8 +177199,6 @@ trung
 hòa”
 của
 BP:
-www.bp.com/sectionbodycopy.
-do?categoryId=9080&contentId=7058126;
 con
 số
 ước
@@ -177234,8 +177210,6 @@ năm
 được
 lấy
 từ
-www.bp.com/sectiongenericarticle.do?categoryId=9032616&co
-ntentId=7038962;
 về
 các
 dự
@@ -177249,7 +177223,6 @@ Airways,
 vui
 lòng
 xem
-www.britishairways.com/travel/csr-projects/public/en_gb.
 thảo
 chuyên
 đề
@@ -177474,9 +177447,6 @@ thị
 Books
 Ngram
 Viewer),
-http://ngrams.
-googlelabs.com/graph?content=incentives&year_start=1940&year_
-end=2008&corpus=0&smoothing=3.
 Truy
 cập
 ngày
@@ -177508,10 +177478,6 @@ thị
 Books
 Ngram
 Viewer),
-http://ngrams.googlelabs.com/
-graph?content=incentivize&year_start=1990&year_end=2008&
-008corpus=0&
-smoothing=3.
 Truy
 cập
 ngày
@@ -177571,7 +177537,6 @@ thế
 giới,
 Davos,
 28/1/2011,
-www.number10.gov.uk/news/prime-ministers-speech-at-the-world-economicforum/;
 phát
 biểu
 của
@@ -177825,8 +177790,6 @@ quà
 nữa”,
 Slate,
 8/12/2009,
-www.slate.com/articles/business/
-the_dismal_science/2009/12/you_shouldnt_have.html.
 of
 Economics),
 xuất
@@ -177850,8 +177813,6 @@ dã
 trong
 tôi”,
 21/12/2006,
-http://
-marginalrevolution.com/marginalrevolution/2006/12/giving
 _to
 _my
 _wi.html.
@@ -177956,9 +177917,6 @@ LLP,
 2011,
 trang
 2,
-www.grantthorton.com/portal/site/gtcom/menuitem.91c078
-ed5c0ef4ca80cd8710033841ca/?vgnextoid=a047bfc210VgnVCM1000003a
-8314RCRD&vgnextfmt=default.
 mùa
 lễ
 hội
@@ -177987,8 +177945,6 @@ phải
 quà”,
 MSN
 Money,
-http://articles.moneycentral.msn.com/SavingandDebt/FindDealsOnline/
-GiftCardsAreNotGifts.aspx.
 đột
 biến
 vào
@@ -177996,7 +177952,6 @@ năm
 2010”,
 Marketwire,
 20/1/2011,
-www.marketwire.com/press-release/secondary-giftcard-economy-sees-significant-growth-in-2010-1383451.htm;
 giá
 của
 các
@@ -178798,7 +178753,6 @@ Harvard
 Magazine,
 tháng
 11-12/2003,
-www.harvard.edu/president/speeches/summers_2003/
 prayer.php.
 hiểm
 của
@@ -179312,8 +179266,6 @@ Columbia
 News
 Service,
 26/2/2010,
-http://columbianewsservice.com/2010/02/celebrity-deathpools-make-a-killing/;
-http://stiffs.com/blog/rules/.
 khiếm
 nhã,
 và
@@ -179348,7 +179300,6 @@ tiếng
 mới
 nhất
 được
-ghoulpool.us/?page_id=571.
 Gollom,
 web
 cược
@@ -179368,7 +179319,6 @@ sẽ
 chết
 tiếp
 theo”.
-www.deathbeeper.com/
 Phát
 biểu
 của
@@ -179595,8 +179545,6 @@ chương
 14
 Geo
 3,
-www.legislation.gov.
-uk/apgb/Geo3/14/48/introduction;
 Clark,
 Đánh
 cược
@@ -180016,8 +179964,6 @@ ho
 chết
 tiệt!”,
 30/7/2003,
-http://www.slate.com/articles/
-news_and_politics/hey_wait_a_minute/2003/07/damn_the_slam_pam_plan.
 Xem
 tổng
 quan
@@ -180174,7 +180120,6 @@ mới”,
 The
 Street,
 1/6/2011,
-www.thestreet.com/story/11135581/1/death-bonds-look-for-newlife.html.
 từ
 bảo
 hiểm
@@ -180228,7 +180173,6 @@ bảo
 hiểm
 nhân
 thọ,
-www.lifemarketassociation.org.
 tính
 mạng
 người
@@ -180300,7 +180244,6 @@ giám
 Bóng
 chày
 Almanac),
-www.baseball-almanac.com/players/player.
 Tyler
 Kepner,
 tiếp
@@ -180323,8 +180266,6 @@ New
 York
 Times,
 21/3/2010;
-http://espn.go.com/espn/
-thelife/salary/index?athleteID=5018022.
 nhất
 trên
 sân,
@@ -180348,8 +180289,6 @@ ti
 vi,
 toilet...
 web
-http://minnesota.twins.mlb.com/
-min/ticketing/season-ticket_prices.jsp;
 giá
 vé
 năm
@@ -180361,7 +180300,6 @@ có
 trên
 trang
 web
-http://newyork.yankees.mlb.com/nyy/ballpark/seating_pricing.
 Rita
 Reif,
 giới
@@ -180573,7 +180511,6 @@ thứ
 3000,
 ngay
 cả
-www.peterose.com.
 tràn
 lan
 trên
@@ -180665,8 +180602,6 @@ phiền
 lòng”,
 CNN,
 13/4/2009,
-http://articles.cnn.com/2009-04-13/us/mets.ballpark_1_citi_field_
-mets-home-stadium-naming?_s=PM:US.
 Superdome
 ở
 New
@@ -180759,7 +180694,6 @@ York
 Life,
 19/5/2011,
 www.
-newyork.com/nyl/v/index.jsp?vgnextoid=c4fbd4d392e10310VgnVCM1000
 00ac841cacRCRD.
 MiLB
 được
@@ -180780,7 +180714,6 @@ cáo
 phim”,
 ESPN.com,
 7/5/2004,
-http://sports.espn.go.comespn/sportsbusiness/news/story?id=1796765.
 từ
 bài
 báo
@@ -180942,7 +180875,6 @@ Michigan”,
 Michigan
 Today,
 8/9/2010,
-http://michigantoday.umich.edu/story.php?id=7865;
 Nocera,
 thượng
 hạng
@@ -181007,8 +180939,6 @@ y
 tế”,
 Boston,
 27/4/2004.
-www.harvard.edu/president/
-speeches/summers_2004/seidman.php.
 dưới
 góc
 độ
@@ -181034,7 +180964,6 @@ bóng
 tiền”,
 Grantland,
 7/12/2011,
-www.grantland.com/story/_/id/7328539/the-economicsmoneyball.
 Richard
 Tomkins,
 cáo
@@ -181154,8 +181083,6 @@ cáo
 báo
 chí,
 19/10/2011,
-http://
-indooradvertising.org/pressroom.shtml.
 Một
 công
 ty
@@ -181254,8 +181181,6 @@ có
 giá
 đặc
 biệt”,
-www.amazon.com/gp/
-product/B005890G8Y/ref=famstripe_kt.
 giả
 bất
 đắc
@@ -181301,7 +181226,6 @@ New
 York
 Times,
 27/8/2007;
-www.myfreecar.com/.
 bị
 thu
 nhà
@@ -181309,15 +181233,12 @@ thế
 nợ”,
 MSNBC,
 7/4/2001,
-http://lifeinc/today/msnbc/msn.com/_news-2011/04/07/6420648a-colorful-way-to-avoid-foreclosure;
 Seth
 Fiegerman,
 mới”,
 The
 Street,
 28/5/2011,
-www.thestreet.com/story/11136217/1/
-the-new-product-placement.html?cm_ven=GOOGLEN.
 Hiện
 tại
 công
@@ -181326,8 +181247,6 @@ ty
 đổi
 tên
 thành
-Godialing:
-www.godialing.com/paintmyhouse.php.
 Gia
 đình
 Sanchez
@@ -181392,8 +181311,6 @@ hóa
 quá
 mức”,
 8/9/1998,
-www.
-commercialalert.org/issues/culture/ad-creep/nader-starts-group-to-oppose-theexcesses-of-marketing-advertising-and-commercialism;
 Micah
 M.
 White,
@@ -181410,7 +181327,6 @@ tinh
 thần”,
 Adbusters
 20/6/2100,
-www.adbusters.org/96/unified-theory-mental-pollution.html;
 câu
 trả
 lời
@@ -181445,7 +181361,6 @@ thêm
 tạp
 chí
 Adbusters,
-www.adbusters.org/magazine;
 Kalle
 Lasn,
 Nhiễu
@@ -182093,7 +182008,6 @@ cáo
 lên
 trẻ
 em
-consumerunion.org/other/captivekids/c1vcnn_chart.htm;
 Simon
 Dumenco,
 tin
@@ -182193,8 +182107,6 @@ không
 quảng
 cáo,
 30/8/2011,
-www.commondreams.org/
-newswire/2011/08/30-0.
 mại
 hóa”,
 New
@@ -182228,8 +182140,6 @@ em
 bất
 đắc
 dĩ”,
-www.consumerunino.org/other/
-captivekids/evaluations.htm;
 Alex
 Molhar,
 Giao
@@ -182384,7 +182294,6 @@ Today,
 TV,
 Colorado,
 13/11/2011,
-http://origin.9news.com/article/229521/222/District-to-place-ad-on-reportcards;
 Stuart
 Elliott,
 điểm
@@ -182509,12 +182418,15 @@ Center
 Smashwords
 edition
 ISBN:
-978-1-4524-5892-2
+978
+1
+4524
+5892
+2
 Ebook
 miễn
 phí
 tại
-www.Sachvui.Com
 Tác
 giả
 giữ

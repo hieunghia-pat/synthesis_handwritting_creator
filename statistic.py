@@ -6,7 +6,7 @@ total_words = 0
 total_lines = 0
 total_paragraphs = 0
 
-dirs = {"word": "UIT_HWDB_word", "line": "UIT_HWDB_line", "paragraph": "UIT_HWDB_paragraph"}
+dirs = {"word": "UIT_HWDB_word_syn", "line": "UIT_HWDB_line_syn"}
 
 def count(parent, dir):
     total_files = 0
@@ -20,8 +20,7 @@ def count(parent, dir):
 for folder in folders:
     total_words += count(dirs["word"], folder)
     total_lines += count(dirs["line"], folder)
-    total_paragraphs += count(dirs["paragraph"], folder)
+    # total_paragraphs += count(dirs["paragraph"], folder)
 
 print(total_words)
 print(total_lines)
-print(total_paragraphs)
